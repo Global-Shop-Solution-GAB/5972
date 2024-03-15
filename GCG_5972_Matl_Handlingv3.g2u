@@ -1,0 +1,1644 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmMain..Create(DashForm)
+Gui.frmMain..Size(1143,713)
+Gui.frmMain..MinX(1016)
+Gui.frmMain..MinY(696)
+Gui.frmMain..Position(0,0)
+Gui.frmMain..BackColor(-2147483633)
+Gui.frmMain..MousePointer(0)
+Gui.frmMain..Event(UnLoad,frmMain_UnLoad)
+Gui.frmMain..Caption("Material Handler Dispatch v3")
+Gui.frmMain..AlwaysOnTop(False)
+Gui.frmMain..FontName("Tahoma")
+Gui.frmMain..FontSize(8.25)
+Gui.frmMain..ControlBox(True)
+Gui.frmMain..MaxButton(True)
+Gui.frmMain..MinButton(True)
+Gui.frmMain..Moveable(True)
+Gui.frmMain..Sizeable(True)
+Gui.frmMain..ShowInTaskBar(True)
+Gui.frmMain..TitleBar(True)
+Gui.frmMain..BarExportButton(True)
+Gui.frmMain..BarRefreshButton(True)
+Gui.frmMain..BarAddButton("ResetGridLayout","Reset Grid Layout to Default",V.Enum.Image!LAYOUT_RESET_COLOR)
+Gui.frmMain..BarAddButton("SaveGridLayout","Save Grid Layout",V.Enum.Image!LAYOUT_SAVE_COLOR)
+Gui.frmMain..Event(UserButtonClicked,frmMain_UserButtonClicked)
+Gui.frmMain..Event(RefreshClick,frmMain_RefreshClick)
+Gui.frmMain..Event(ExportClick,frmMain_ExportClick)
+Gui.frmMain.tabTabs.Create(Tab)
+Gui.frmMain.tabTabs.Size(1128,635)
+Gui.frmMain.tabTabs.Position(1,4)
+Gui.frmMain.tabTabs.Enabled(True)
+Gui.frmMain.tabTabs.Visible(True)
+Gui.frmMain.tabTabs.Zorder(0)
+Gui.frmMain.tabTabs.FontName("Tahoma")
+Gui.frmMain.tabTabs.FontSize(8.25)
+Gui.frmMain.tabTabs.Anchor(15)
+Gui.frmMain.tabTabs.Tabs(2)
+Gui.frmMain.tabTabs.SetTab(0)
+Gui.frmMain.tabTabs.Caption("Material")
+Gui.frmMain.tabTabs.SetTab(1)
+Gui.frmMain.tabTabs.Caption("-")
+Gui.frmMain.GsGCData1.Create(GsGridControl)
+Gui.frmMain.GsGCData1.Enabled(True)
+Gui.frmMain.GsGCData1.Parent("tabTabs",1)
+Gui.frmMain.GsGCData1.Visible(True)
+Gui.frmMain.GsGCData1.Zorder(0)
+Gui.frmMain.GsGCData1.Size(1006,572)
+Gui.frmMain.GsGCData1.Position(0,0)
+Gui.frmMain.GsGCData1.Dock(5)
+Gui.frmMain.GsGCData1.Event(RowCellClick,GsGCData1_RowCellClick)
+Gui.frmMain.GsGCData0.Create(GsGridControl)
+Gui.frmMain.GsGCData0.Enabled(True)
+Gui.frmMain.GsGCData0.Parent("tabTabs",0)
+Gui.frmMain.GsGCData0.Visible(True)
+Gui.frmMain.GsGCData0.Zorder(0)
+Gui.frmMain.GsGCData0.Size(1126,606)
+Gui.frmMain.GsGCData0.Position(0,0)
+Gui.frmMain.GsGCData0.Dock(5)
+Gui.frmMain.GsGCData0.Event(RowCellClick,GsGCData0_RowCellClick)
+Gui.frmMain.GsGCData0.Event(ColumnPositionChanged,frmMain_GsGCData0_ColumnPositionChanged)
+Gui.frmMain.flow1.Create(FlowFrame)
+Gui.frmMain.flow1.Enabled(True)
+Gui.frmMain.flow1.Visible(True)
+Gui.frmMain.flow1.Zorder(0)
+Gui.frmMain.flow1.Size(624,40)
+Gui.frmMain.flow1.Position(502,37)
+Gui.frmMain.cmd1.Create(Button)
+Gui.frmMain.cmd1.Enabled(True)
+Gui.frmMain.cmd1.Visible(True)
+Gui.frmMain.cmd1.Zorder(0)
+Gui.frmMain.cmd1.Size(75,33)
+Gui.frmMain.cmd1.Position(0,0)
+Gui.frmMain.cmd1.Caption("Material Req")
+Gui.frmMain.cmd1.FontName("Tahoma")
+Gui.frmMain.cmd1.FontSize(8.25)
+Gui.frmMain.cmd1.Event(Click,Matlreq_Click)
+Gui.frmMain.cmd1.BackColor(-2147483621)
+Gui.frmMain.cmd1.Parent("flow1")
+Gui.frmMain.frameprinter.Create(Frame)
+Gui.frmMain.frameprinter.Enabled(True)
+Gui.frmMain.frameprinter.Visible(True)
+Gui.frmMain.frameprinter.Zorder(0)
+Gui.frmMain.frameprinter.Size(246,38)
+Gui.frmMain.frameprinter.Position(0,0)
+Gui.frmMain.frameprinter.Caption("Label Printer")
+Gui.frmMain.frameprinter.FontName("Tahoma")
+Gui.frmMain.frameprinter.FontSize(8.25)
+Gui.frmMain.frameprinter.BorderStyle(3)
+Gui.frmMain.frameprinter.Parent("flow1")
+Gui.frmMain.txtprinter.Create(TextBox,"",True,233,20,0,8,15,True,0,"Tahoma",8.25,,1)
+Gui.frmMain.txtprinter.Parent("frameprinter")
+Gui.frmMain.frameAutoRef.Create(Frame)
+Gui.frmMain.frameAutoRef.Enabled(True)
+Gui.frmMain.frameAutoRef.Visible(True)
+Gui.frmMain.frameAutoRef.Zorder(0)
+Gui.frmMain.frameAutoRef.Size(88,38)
+Gui.frmMain.frameAutoRef.Position(336,3)
+Gui.frmMain.frameAutoRef.Caption("Refr. (Mins.)")
+Gui.frmMain.frameAutoRef.FontName("Tahoma")
+Gui.frmMain.frameAutoRef.FontSize(8.25)
+Gui.frmMain.frameAutoRef.BorderStyle(3)
+Gui.frmMain.frameAutoRef.Parent("flow1")
+Gui.frmMain.chkAutoRef.Create(CheckBox)
+Gui.frmMain.chkAutoRef.Enabled(True)
+Gui.frmMain.chkAutoRef.Visible(True)
+Gui.frmMain.chkAutoRef.Zorder(0)
+Gui.frmMain.chkAutoRef.Size(26,20)
+Gui.frmMain.chkAutoRef.Position(8,15)
+Gui.frmMain.chkAutoRef.Caption("")
+Gui.frmMain.chkAutoRef.FontName("Tahoma")
+Gui.frmMain.chkAutoRef.FontSize(8.25)
+Gui.frmMain.chkAutoRef.Parent("frameAutoRef")
+Gui.frmMain.chkAutoRef.TabStop(True)
+Gui.frmMain.chkAutoRef.TabIndex(1)
+Gui.frmMain.txtAutoRef.Create(TextBox,"",True,32,20,0,38,15,True,0,"Tahoma",8.25,,1)
+Gui.frmMain.txtAutoRef.Parent("frameAutoRef")
+Gui.frmMain.txtAutoRef.Event(LostFocus,txt_AutoRef_LostFocus)
+Gui.frmMain.txtAutoRef.Event(KeyPressEnter,txt_AutoRef_LostFocus)
+Gui.frmMain.txtAutoRef.TabStop(True)
+Gui.frmMain.txtAutoRef.TabIndex(2)
+Gui.frmMain.lblstatus.Create(Label,"time test",False,42,13,0,430,3,True,0,"Tahoma",8.25,,0,0)
+Gui.frmMain.lblstatus.BorderStyle(0)
+Gui.frmMain.lblstatus.DefaultValue("")
+Gui.frmMain.lblstatus.Parent("flow1")
+Gui.frmMain.lblGSUser.Create(Label,"Active User:",True,59,13,0,931,59,True,0,"Tahoma",8.25,,0,0)
+Gui.frmMain.lblGSUser.BorderStyle(0)
+Gui.frmMain.lblGSUser.DefaultValue("")
+Gui.frmMain.lblGSUser1.Create(Label,"Label",True,25,13,0,1000,59,True,0,"Tahoma",8.25,,0,0)
+Gui.frmMain.lblGSUser1.BorderStyle(0)
+Gui.frmMain.timerAutoRefresh.Create(Timer)
+Gui.frmMain.timerAutoRefresh.Enabled(False)
+Gui.frmMain.timerAutoRefresh.Interval(60000)
+Gui.frmMain.timerAutoRefresh.Event(Timer,timerAutoRefresh_Timer)
+Gui.f_matlreq..Create(BaseForm)
+Gui.f_matlreq..Caption("Material Request ")
+Gui.f_matlreq..Size(366,156)
+Gui.f_matlreq..MinX(0)
+Gui.f_matlreq..MinY(0)
+Gui.f_matlreq..Position(0,0)
+Gui.f_matlreq..BackColor(-2147483633)
+Gui.f_matlreq..MousePointer(0)
+Gui.f_matlreq..Event(UnLoad,f_MatlReq_Unload)
+Gui.f_matlreq..AlwaysOnTop(True)
+Gui.f_matlreq..FontName("Tahoma")
+Gui.f_matlreq..FontSize(8.25)
+Gui.f_matlreq..ControlBox(True)
+Gui.f_matlreq..MaxButton(True)
+Gui.f_matlreq..MinButton(True)
+Gui.f_matlreq..Moveable(True)
+Gui.f_matlreq..Sizeable(True)
+Gui.f_matlreq..ShowInTaskBar(True)
+Gui.f_matlreq..TitleBar(True)
+Gui.f_matlreq.txt1.Create(TextBox,"",True,295,20,0,15,43,True,0,"Arial",8,-2147483646,1)
+Gui.f_matlreq.txt1.Event(KeyPressEnter,Matlreq_Enter)
+Gui.f_matlreq.txt1.DefaultValue("")
+Gui.f_matlreq.txt1.ForeColor(-2147483639)
+Gui.f_matlreq.lbl1.Create(Label,"Scan Labor Barcode ",True,103,14,0,16,18,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_matlreq.lbl1.ForeColor(0)
+Gui.f_matlreq.lbl1.BorderStyle(0)
+Gui.f_matlreq.lbl2.Create(Label,"Successful              Failed",True,125,14,0,41,87,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_matlreq.lbl2.BorderStyle(0)
+Gui.f_matlreq.txt2.Create(TextBox,"",True,13,20,0,116,83,True,0,"Arial",8,255,1)
+Gui.f_matlreq.txt3.Create(TextBox,"",True,13,20,0,16,83,True,0,"Arial",8,49152,1)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.bLoadData.Declare
+	V.Global.sGridViews.Declare
+	
+	Variable.Global.GuiUserNo.Declare(String)
+	Variable.Global.GuiUserName.Declare(String)
+	Variable.Global.sJob.Declare(String)
+	Variable.Global.sSuffix.Declare(String)
+	Variable.Global.sSeq.Declare(String)
+	Variable.Global.sPart.Declare(String)
+	Variable.Global.sSQLDate.Declare(String)
+	Variable.Global.sWoSuffix.Declare(String)
+	Variable.Global.sWO.Declare(String)
+	Variable.Global.sWoSeq.Declare(String)
+	Variable.Global.sWC.Declare(String)
+	v.Global.bRefresh.Declare		
+	V.Global.bSecs.Declare
+	V.Global.iTimerMili.Declare
+	V.Global.iTimerMili2.Declare
+	V.Global.iTimerDiff.Declare
+	V.Global.iCnt.Declare
+	V.Global.iSecs.Declare
+	v.Global.bChange.Declare(Boolean,False)
+	
+	
+	
+Program.External.Include.Library("Gridview_UniversalFunctions.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+	
+	'*************************************************************************************************
+	'************* Start Dashboard Template Stuff
+	
+	'REQUIRED
+	'Set list of controls (grids) that should have their preferences saved.  You know, so they grids load the same way the user left them.
+	'FORMNAME*!*CONTROLNAME*!*GRIDVIEWNAME#$#form*!*gsgridcontrol*!*gridview#$#etc*!*etc*!*etc
+	'Wash/rinse/repeat for each gridview that you want to store.
+	'If there is only one gridview to maintain, only supply the single reference.
+	V.Global.sGridViews.Set("frmMain*!*GsGCData0*!*gvData0#$#frmMain*!*GsGCData1*!*gvData1")
+	'V.Global.sGridViews.Set("frmMain*!*GsGCWindMachines*!*gvWindMachines#$#frmMain*!*GsGCShakers*!*gvShakers")
+	
+	'OPTIONAL
+	'Set standard context menus for each grid.
+	'sGridControls: FORMNAME*!*GSGRIDCONTROLNAME*!*CONTEXTMENUNAME#$# etc etc
+	'	If only a single gridview, only provide a single list of controls.  eg, "frmMain*!*GsGCShakers*!*CTXShakers"
+	'sContextMenuItems: ITEMNAME *!* ITEMCAPTION *!* EVENTHANDLER #$# etc etc
+	'	If only a single context menu item, only provide a single list of controls. eg, "Refresh*!*Refresh*!*cmdRefresh_Click"
+	'F.Intrinsic.Control.CallSub(SetContextMenus,"sGridControls","frmMain*!*GsGCData*!*CTXMENU","sContextMenuItems","Refresh*!*Refresh*!*cmdRefresh_Click#$#Export*!*Export*!*ExportGrids#$#ResetColumns*!*Reset Columns*!*ResetGridColumns")
+	
+	'IGNORE...
+	'Set ARC ID
+	'Grabs the ARCID from the filename for use with saving/restoring grid preferences.  So make sure you stick with the file naming convention!
+	'Typical file naming convention: DDD_IIII_Description.g2u
+	'DDD=Department (GCG, ATG, GAB, etc.)
+	'IIII=Reserved ARC ID (5849, 1234, whatever)
+	'Description=Short Description of Project
+	'Example: GCG_5849_UltimateDashboard.g2u
+	F.Intrinsic.Control.CallSub(SetARCID)
+	
+	'Open DB Connection
+	F.ODBC.Connection!con.OpenCompanyConnection(500)
+	
+	'************* End Dashboard Template Stuff
+	'*************************************************************************************************
+	
+	'Everything beyond this point isn't tied to the "template", but is project specific programming.
+	
+		'--------------------
+	'precheck stuff based on launch from GUI or GS Menu
+	'called from GUI	
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		F.Intrinsic.Control.Case("15710")
+			V.Passed.000020.Set("MATL Disp")
+			V.Passed.000016.Set("MATL Req")
+			f.Intrinsic.Control.End
+		F.Intrinsic.Control.Case("49710")
+			F.Intrinsic.String.Replace(V.Passed.MainFormView-windowsUIButtonPanel-1,"Script 1", "MATL Req",V.Passed.MainFormView-windowsUIButtonPanel-1)
+			F.Intrinsic.String.Replace(V.Passed.MainFormView-windowsUIButtonPanel-1,"Script 2", "MATL Disp",V.Passed.MainFormView-windowsUIButtonPanel-1)
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Case("15770")
+			F.Intrinsic.Control.CallSub(Checksec)
+			F.Intrinsic.Control.CallSub(Check_Table)
+			F.Intrinsic.Control.CallSub(Check_Printer)
+		F.Intrinsic.Control.Case("15760")
+			F.Intrinsic.Control.CallSub(Checksec)
+			F.Intrinsic.Control.CallSub(Check_Table)
+			F.Intrinsic.Control.CallSub(Matlreq)
+			F.ODBC.Connection!con.Close
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Case("49760")
+			F.Intrinsic.Control.CallSub(Checksec)
+			F.Intrinsic.Control.CallSub(Check_Table)
+			F.Intrinsic.Control.CallSub(Matlreq)
+			F.ODBC.Connection!con.Close
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Case("49761")
+			F.Intrinsic.Control.CallSub(Checksec)
+			F.Intrinsic.Control.CallSub(Check_Table)
+			F.Intrinsic.Control.CallSub(Check_Printer)
+			'F.Intrinsic.Control.CallSub(Cleanup)	
+	F.Intrinsic.Control.EndSelect
+	'called from custom GS menu item
+	F.Intrinsic.Control.CallSub(Checksec)
+	F.Intrinsic.Control.CallSub(Check_Table)
+	F.Intrinsic.Control.CallSub(Check_Printer)
+	
+	'Set first tab as active tab
+	Gui.frmMain.tabTabs.SetTab(0)
+	f.Intrinsic.UI.InvokeWaitDialog("Loading...","Please Wait")
+	'Use this to determine which data to load.  Goto SUB>DATALOADER to flesh out the specifics of the different grids, views, etc.
+	'Load Tab 0 > Grid 0
+	F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData0")
+	'Load Tab 1 > Grid 1
+	F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData1")
+	
+	'load grid preferences
+	'technically template stuff.
+	'adding code to disable to the timer RLK - 4-18-2022
+	Gui.frmMain.timerAutoRefresh.Enabled(False)
+	F.Intrinsic.Control.CallSub(Deserialize)
+	'adding code to Enabled to the timer RLK - 4-18-2022
+	Gui.frmMain.timerAutoRefresh.Enabled(True)
+	F.Intrinsic.UI.CloseWaitDialog
+	'Make the main form visible
+	Gui.frmMain..Visible(True)	
+
+'$%500822000004000	
+
+Program.Sub.Main.End
+
+Program.Sub.DataLoader.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		'V.Args.sKey
+		
+		'Get data and load into grid(s)
+		'                                                                           Name of form where GridControl lives                     Name of Gridview (usually just the same name as GridControl or DataTable, but with gv prefix)
+		'                                                                           |                                                        |
+		'                                                      Name of DataTable    |                             Name of GridControl to load data into      Basis (SQL query) to load into the grid
+		'                                                      \/                   \/                            \/                         \/              \/                
+		'F.Intrinsic.Control.CallSub(LoadData,"sDataTableName","dtData","sFormName","frmMain","sGridControlName","GsGCData","sGridViewName","gvData","sSQL","select PART, LOCATION, PRODUCT_LINE, DESCRIPTION from V_INVENTORY_ALL order by PART, LOCATION")
+		
+		F.Intrinsic.Control.SelectCase(V.Args.sKey)
+			F.Intrinsic.Control.Case("GsGCData0")					
+			
+				F.Intrinsic.Control.CallSub(LoadData, "sDataTableName","dtData","sFormName","frmMain","sGridControlName","GsGCData0","sGridViewName","gvData0","sSQL","Select status as '^status', Convert(0,SQL_Bit) as 'Issued','Picklist' as '^Picklist', (select case when suffix <> '###' then job+'-'+suffix else job end) as WO,seq,part,loc,description,quantity,origin,destination,req_by,date_req,picked_by from GCG_5972_MATL_HNDL3 where Status <> 'DELIVERED' order by Status desc, date_req")
+				'Additional Grid Formatting Options...
+				'Gui.frmMain.GsGCData0.SetGridviewProperty("gvData0","EXPANDALLGROUPS",True)
+				'Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","WORKCENTER","GROUPINDEX",0) 
+				'Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","PULLED","CellBackColor","LightYellow")
+				'Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","EST_HRS","DisplayCustomNumeric","#,###,###,##0.00")
+				'Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","DATE_START","DisplayCustomDatetime","d")
+				'Gui.frmMain.GsGCData0.AddSummaryItem("gvData0","SEQ_ACT_HRS","SUM_SEQ_ACT_HRS","Sum","","","n")
+				Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","quantity","DisplayCustomNumeric","#,###,###,##0.")
+				Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","date_req","CellHAlignment","Center")
+				Gui.frmMain.GsGCData0.SetColumnProperty("gvData0","date_req","DisplayCustomDatetime","g")
+				
+				
+				GUI.frmMain.GsGCData0.SuspendLayout()				
+				'Set status column color based on Picked_By
+				V.Local.iCnt.Declare
+				F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtdata.RowCount--,1)
+					F.Intrinsic.Control.SelectCase(V.DataTable.dtData(V.Local.iCnt).^status!FieldValTrim)
+						F.Intrinsic.Control.Case("PICKING")
+							gui.frmMain.GsGCData0.SetCellAppearance("gvData0",0,V.Local.iCnt,"BackColor","Green")
+						F.Intrinsic.Control.Case("OPEN")
+							gui.frmMain.GsGCData0.SetCellAppearance("gvData0",0,V.Local.iCnt,"BackColor","Yellow")
+					F.Intrinsic.Control.EndSelect
+				F.Intrinsic.Control.Next(V.Local.iCnt)	
+				
+				'lookup WO and check for fully issued status
+				f.Data.Dictionary.CreateFromSQL("dData0","con","select case when suffix <> '' then job+'-'+suffix else job end as WO,Convert(0,SQL_Bit) as 'Issued' from v_JOB_OPERATIONS where LMO = 'M' and flag_closed <> 'Y' and seq < '995000'")
+				f.Data.Dictionary.SetDefaultReturn("dData0",1)
+				f.Data.DataTable.FillFromDictionary("dtData","dData0","WO","Issued")
+				f.Data.Dictionary.Close("dData0")	
+				
+				'set row height
+				GUI.frmMain.GsGCData0.SetGridviewProperty("gvData0","rowheight",75)
+				GUI.frmMain.GsGCData0.SetGridviewProperty("gvData0", "ColumnPanelRowHeight", 40)
+				
+				'hide columns
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0","Loc","Visible",False)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0","Issued","Visible",False)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0","Quantity","Visible",False)
+				
+				'set column font size for tablet
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Part", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Part", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Part", "CellFontSize", 18)
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "WO", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "WO", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "WO", "CellFontSize", 18)
+
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Description", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Description", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Description", "CellFontSize", 18)
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Quantity", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Quantity", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Quantity", "CellFontSize", 18)
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Loc", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Loc", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Loc", "CellFontSize", 18)
+								
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Origin", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Origin", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Origin", "CellFontSize", 18)				
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Destination", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Destination", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Destination", "CellFontSize", 18)				
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Req_By", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Req_By", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Req_By", "CellFontSize", 18)				
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Date_Req", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Date_Req", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Date_Req", "CellFontSize", 18)	
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Picked_By", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Picked_By", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Picked_By", "CellFontSize", 18)
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Seq", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Seq", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Seq", "CellFontSize", 18)	
+				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Issued", "AllowSize", true)
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Issued", "HeaderFontSize", 18)				
+				GUI.frmMain.GsGCData0.SetColumnProperty("gvData0", "Issued", "CellFontSize", 18)
+				
+				GUI.frmMain.GsGCData0.ResumeLayout()
+											
+				'load saved printer
+				F.Intrinsic.Control.CallSub(Check_Printer)
+				
+				'set GS active user in form				
+				gui.frmMain.lblGSUser1.Caption(v.Caller.User)
+								
+			F.Intrinsic.Control.Case("GsGCData1")
+				F.Intrinsic.Control.CallSub(LoadData, "sDataTableName","dtData","sFormName","frmMain","sGridControlName","GsGCData1","sGridViewName","gvData1","sSQL","SELECT * FROM V_ITEM_MASTER")
+				'Additional Grid Formatting Options...
+				'Gui.frmMain.GsGCData1.SetGridviewProperty("gvData1","EXPANDALLGROUPS",True)
+				'Gui.frmMain.GsGCData1.SetColumnProperty("gvData1","WORKCENTER","GROUPINDEX",0) 
+				'Gui.frmMain.GsGCData1.SetColumnProperty("gvData1","PULLED","CellBackColor","LightYellow")
+				'Gui.frmMain.GsGCData1.SetColumnProperty("gvData1","EST_HRS","DisplayCustomNumeric","#,###,###,##0.00")
+				'Gui.frmMain.GsGCData1.SetColumnProperty("gvData1","DATE_START","DisplayCustomDatetime","d")
+				'Gui.frmMain.GsGCData1.AddSummaryItem("gvData1","SEQ_ACT_HRS","SUM_SEQ_ACT_HRS","Sum","","","n")
+				
+			'I felt obligated to tell the user/programmer when an undefined key was encountered that way they weren't left wondering why nothing was happening.
+			F.Intrinsic.Control.CaseElse
+				F.Intrinsic.String.Build("[Sub:{0} Key:{1}] This key was not specified.",V.Ambient.CurrentSubroutine,V.Args.sKey,V.Local.sError)
+				F.Intrinsic.UI.Msgbox(V.Local.sError)
+			
+		F.Intrinsic.Control.EndSelect
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.DataLoader.End
+
+Program.Sub.frmMain_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'adding code to disable to the time RLK - 4-18-2022
+		Gui.frmMain.timerAutoRefresh.Enabled(False)
+		
+		'F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)			
+			F.Intrinsic.Control.CallSub(Save_Printer)
+		'F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmMain_UnLoad.End
+
+Program.Sub.frmMain_RefreshClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'adding code to disable to the timer RLK - 4-18-2022
+		Gui.frmMain.timerAutoRefresh.Enabled(False)
+
+		f.Intrinsic.Control.If(v.Global.bChange,=,True)
+			F.Intrinsic.Control.CallSub(Serialize)
+		f.Intrinsic.Control.EndIf
+		v.Global.bChange.Set(False)
+		
+		'adding code to enable to the timer after grid as been serialized RLK - 4-18-2022
+		GUI.frmMain.timerAutoRefresh.Enabled(True)
+		F.Intrinsic.Control.CallSub(Save_Printer)
+		
+		'Do this for the active tab...
+		F.Intrinsic.Control.SelectCase(V.Screen.frmMain!tabTabs.Tab)
+			F.Intrinsic.Control.Case(0)
+				F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData0")
+				
+			F.Intrinsic.Control.Case(1)
+				F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData1")
+				
+		F.Intrinsic.Control.EndSelect
+		'adding code to disable to the timer RLK - 4-18-2022
+		Gui.frmMain.timerAutoRefresh.Enabled(False)
+		F.Intrinsic.Control.CallSub(Deserialize)
+		'adding code to enable to the timer after grid as been Deserialize RLK - 4-18-2022
+		GUI.frmMain.timerAutoRefresh.Enabled(True)
+		F.Intrinsic.Control.CallSub(Check_Printer)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmMain_RefreshClick.End
+
+Program.Sub.frmMain_ExportClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'Do this for the active tab...
+		F.Intrinsic.Control.SelectCase(V.Screen.frmMain!tabTabs.Tab)
+			F.Intrinsic.Control.Case(0)
+				'Export the grid in Tab0
+				F.Intrinsic.Control.CallSub(ExportGrid,"sGridControls","frmMain*!*GsGCData0")
+				
+			F.Intrinsic.Control.Case(1)
+				'Export the grid in Tab1
+				F.Intrinsic.Control.CallSub(ExportGrid,"sGridControls","frmMain*!*GsGCData1")
+			
+		F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmMain_ExportClick.End
+
+Program.Sub.frmMain_UserButtonClicked.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'V.ARGS.BUTTON: ButtonName of the button clicked (not the text/caption, but the control name)...
+		'From ScreenSU...
+		'                           ButtonName
+		'                           \/
+		'Gui.frmMain..BarAddButton("ResetColumns","Reset Columns",V.Enum.Image!LAYOUT_RESET_COLOR)
+		F.Intrinsic.Control.SelectCase(V.Args.Button)
+			F.Intrinsic.Control.Case("ResetGridLayout")
+			
+				'Do this for the active tab...
+				F.Intrinsic.Control.SelectCase(V.Screen.frmMain!tabTabs.Tab)
+					F.Intrinsic.Control.Case(0)
+						F.Intrinsic.Control.CallSub(ResetGrid,"sGridViewName","gvData0")
+						F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData0")
+						
+					F.Intrinsic.Control.Case(1)
+						F.Intrinsic.Control.CallSub(ResetGrid,"sGridViewName","gvData1")
+						F.Intrinsic.Control.CallSub(DataLoader,"sKey","GsGCData1")
+						
+				F.Intrinsic.Control.EndSelect
+				
+				'adding code to disable to the timer RLK - 4-18-2022
+				Gui.frmMain.timerAutoRefresh.Enabled(False)
+				F.Intrinsic.Control.CallSub(Deserialize)
+				'adding code to Enabled to the timer RLK - 4-18-2022
+				Gui.frmMain.timerAutoRefresh.Enabled(True)
+			
+			'I added this because I noticed there are times that the grid layout was not saved, and I couldn't find an event for trying to automate it.
+			'Even this seems sketch right now.  Like, I don't know if it's doing what I expect it to do.  Not sure why it wouldn't, but there it is.
+			F.Intrinsic.Control.Case("SaveGridLayout")
+				'adding code to disable to the timer RLK - 4-18-2022
+				Gui.frmMain.timerAutoRefresh.Enabled(False)
+				F.Intrinsic.Control.CallSub(Serialize)
+				'adding code to Enabled to the timer RLK - 4-18-2022
+				Gui.frmMain.timerAutoRefresh.Enabled(False)
+				
+		F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmMain_UserButtonClicked.End
+
+Program.Sub.frmMain_GsGCData0_ColumnPositionChanged.Start
+V.Global.bChange.Set(True)
+Program.Sub.frmMain_GsGCData0_ColumnPositionChanged.End
+
+Program.Sub.GsGCData0_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	'V.Args.Screen: FRMMAIN
+	'V.Args.ControlName:GSGCDATA0
+	'V.Args.EventType: ROWCELLCLICK
+	'V.Args.Column: @Part
+	'V.Args.RowIndex: 0
+	
+	'This sub call will handle all of the basic built in core data entity stuff...
+	'linking to S&D, PO View, SO View, WO View, and DCS Linking
+	'@Part, @SO, @PO, @WO, PART, SO, PO, WO columns all handled in the basic sense.
+	F.Intrinsic.Control.CallSub(GetActiveGridView,"ControlName",V.Args.ControlName)
+	F.Intrinsic.Control.CallSub(RowCellClick_HandleCoreEntity, "Screen", V.Args.Screen, "ControlName", V.Args.ControlName, "EventType", V.Args.EventType, "Column", V.Args.Column, "RowIndex", V.Args.RowIndex, "GridView", "gvData0")
+	
+	'Handle anything not handled...
+	'F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+	'	F.Intrinsic.Control.Case("Column Name")
+	'		'Do awesome stuff...
+	'	F.Intrinsic.Control.Case("Column Name 2")
+	'		'Do GNARLY STUFF!
+	'F.Intrinsic.Control.EndSelect
+		
+F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+F.Intrinsic.Control.Case("^STATUS")
+	V.Local.sWorkOrder.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sSeq.Declare
+	V.Local.sPart.Declare
+	V.Local.sStatus.Declare
+	V.Local.sName.Declare
+	V.Local.iDash.Declare
+	V.Local.sSQL.Declare
+	V.Local.sSel.Declare
+	V.Local.sRet.Declare
+	V.Local.sWoPrevSeq.Declare
+	V.Local.sReqDateTime.Declare
+	V.Local.sDate.Declare
+	V.Local.sTime.Declare
+	V.Local.sMonth.Declare
+	V.Local.sDay.Declare
+	V.Local.sYear.Declare
+	V.Local.sHours.Declare
+	V.Local.sMinutes.Declare
+	V.Local.sSeconds.Declare
+	V.Local.sSQLDate.Declare
+	V.Local.sNowDate.Declare
+	v.Local.sUserGroups.Declare
+	V.Local.bChk.Declare(Boolean)
+	
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","WO",v.Args.RowIndex,v.Global.sWO)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Seq",v.Args.RowIndex,V.Global.sWOSeq)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Part",v.Args.RowIndex,v.Local.sPart)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","date_req",v.Args.RowIndex,v.Local.sReqDateTime)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Picked_by",v.Args.RowIndex,v.Local.sName)
+	
+	' Convert Gridview Datetime to SQL Datetime
+	F.Intrinsic.String.DateString(V.Local.sReqDateTime,V.Local.sDate)
+	F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+	F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+	F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+	F.Intrinsic.String.TimeStringsec(V.Local.sReqDateTime,V.Local.sTime)
+	F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+	F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+	F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+	F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.local.sSQLDate)
+	
+	F.Intrinsic.String.Instr(V.Global.sWO,"-",0,V.Local.iDash)
+	F.Intrinsic.Control.If(V.Local.iDash,>,0)
+		F.Intrinsic.String.Right(V.Global.sWO,3,V.Global.sWOSuffix)
+		F.Intrinsic.String.Left(V.Global.sWO,6,V.Global.sWO)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Left(V.Global.sWO,6,V.Global.sWO)
+		V.Global.sWOSuffix.Set("###")
+	F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.String.Build("Select Status from GCG_5972_MATL_HNDL3 where Job = '{0}' and Suffix = '{1}' and Seq = '{2}' and Part = '{3}' and Date_Req = '{4}'",V.Global.sWO,V.Global.sWOSuffix,V.Global.sWOSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSel)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sStatus)
+	F.Intrinsic.String.Trim(V.Local.sStatus(0),V.Local.sStatus(0))
+	
+	' Convert V.Ambient.Now to SQL Datetime
+	F.Intrinsic.String.DateString(V.Ambient.Now,V.Local.sDate)
+	F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+	F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+	F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+	F.Intrinsic.String.TimeStringsec(V.Ambient.Now,V.Local.sTime)
+	F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+	F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+	F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+	F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.Local.sNowDate)
+	
+	F.Global.Security.GetUserGroups(V.Caller.User.Trim,V.Local.sUserGroups)
+		F.Intrinsic.String.IsInString(V.Local.sUserGroups,"MHADMIN",0,V.Local.bChk)
+	
+	F.Intrinsic.Control.If(v.Local.sName.Trim,<>,v.Global.GuiUserName.Trim,and,v.Local.sStatus(0),=,"PICKING")
+	f.Intrinsic.Control.AndIf(v.Local.bChk,=,False)
+		F.Intrinsic.UI.Msgbox("Material is being picked by another employee","On-Line GUI Message")
+	F.Intrinsic.Control.Else
+	'Gui.f_MDisp..Visible(0)
+		F.Intrinsic.Control.SelectCase(V.Local.sStatus(0))
+			F.Intrinsic.Control.Case("OPEN")
+				F.Intrinsic.String.Build("update GCG_5972_MATL_HNDL3 set status = 'PICKING', Date_Picked = '{0}', Picked_By = '{1}' where Job = '{2}' and Suffix = '{3}' and Seq = '{4}' and Part = '{5}' and Date_Req = '{6}'",V.Local.sNowDate,V.Global.GuiUserName,V.Global.sWO,V.Global.sWOSuffix,V.Global.sWOSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)	
+				'print pick ticket
+				f.Intrinsic.Control.CallSub(matlpick_click)
+			F.Intrinsic.Control.Case("PICKING")
+				F.Intrinsic.String.Build("update GCG_5972_MATL_HNDL3 set status = 'DELIVERED', Date_Del = '{0}', Del_By = '{1}' where Job = '{2}' and Suffix = '{3}' and Seq = '{4}' and Part = '{5}' and Date_Req = '{6}'",V.Local.sNowDate,V.Global.GuiUserName,V.Global.sWO,V.Global.sWOSuffix,V.Global.sWOSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				' Find the previous labor sequence for the work order
+				F.Intrinsic.Control.If(V.Global.sWOSuffix,=,"###")
+					F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SEQ < '{1}' and LMO = 'L' order by SEQ desc",V.Global.sWO,V.Global.sWOSeq,V.Local.sSel)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ < '{2}' and LMO = 'L' order by SEQ desc",V.Global.sWO,V.Global.sWOSuffix,V.Global.sWOSeq,V.Local.sSel)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+				' Remove any WIP in Bins for this Work Order and Previous sequence
+				F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+					V.Local.sWoPrevSeq.Set(V.Local.sRet)
+					F.Intrinsic.Control.If(V.Global.sWOSuffix,=,"###")
+						F.Intrinsic.String.Build("Delete from WIP_BIN where JOB = '{0}' and SEQUENCE = '{1}'",V.Global.sWO,V.Local.sWoPrevSeq,V.Local.sSQL)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("Delete from WIP_BIN where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE = '{2}'",V.Global.sWO,V.Global.sWOSuffix,V.Local.sWoPrevSeq,V.Local.sSQL)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndSelect
+	F.Intrinsic.Control.EndIf
+	'refresh gridview
+	F.Intrinsic.Control.CallSub(frmmain_refreshclick)
+	
+	F.Intrinsic.Control.Case("^PICKLIST")
+		
+'	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","WO",v.Args.RowIndex,v.Global.sWO)
+'	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Seq",v.Args.RowIndex,V.Global.sWOSeq)
+'	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Part",v.Args.RowIndex,v.Local.sPart)
+'	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","date_req",v.Args.RowIndex,v.Local.sReqDateTime)
+'	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Picked_by",v.Args.RowIndex,v.Local.sName)
+'	
+'	' Convert Gridview Datetime to SQL Datetime
+'	F.Intrinsic.String.DateString(V.Local.sReqDateTime,V.Local.sDate)
+'	F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+'	F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+'	F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+'	F.Intrinsic.String.TimeStringsec(V.Local.sReqDateTime,V.Local.sTime)
+'	F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+'	F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+'	F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+'	F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.local.sSQLDate)
+'	
+'	F.Intrinsic.String.Instr(V.Global.sWO,"-",0,V.Local.iDash)
+'	F.Intrinsic.Control.If(V.Local.iDash,>,0)
+'		F.Intrinsic.String.Right(v.Global.sWO,3,V.global.sWoSuffix)
+'		F.Intrinsic.String.Left(v.Global.sWO,6,V.Global.sWO)
+'	F.Intrinsic.Control.Else
+'		F.Intrinsic.String.Left(v.Global.sWO,6,V.Global.sWO)
+'		V.global.sWoSuffix.Set("")
+'	F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.CallSub(matlpick_click)
+F.Intrinsic.Control.EndSelect	
+	
+	
+	F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+	
+	
+	
+	
+Program.Sub.GsGCData0_RowCellClick.End
+
+Program.Sub.GsGCData1_RowCellClick.Start
+	'V.Args.Screen: FRMMAIN
+	'V.Args.ControlName:GSGCDATA0
+	'V.Args.EventType: ROWCELLCLICK
+	'V.Args.Column: @Part
+	'V.Args.RowIndex: 0
+	
+	'This sub call will handle all of the basic built in core data entity stuff...
+	'linking to S&D, PO View, SO View, WO View, and DCS Linking
+	'@Part, @SO, @PO, @WO, PART, SO, PO, WO columns all handled in the basic sense.
+	F.Intrinsic.Control.CallSub(GetActiveGridView,"ControlName",V.Args.ControlName)
+	F.Intrinsic.Control.CallSub(RowCellClick_HandleCoreEntity, "Screen", V.Args.Screen, "ControlName", V.Args.ControlName, "EventType", V.Args.EventType, "Column", V.Args.Column, "RowIndex", V.Args.RowIndex, "GridView", "gvData1")
+	
+	'Handle anything not handled...
+	'F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+	'	F.Intrinsic.Control.Case("Column Name")
+	'		'Do awesome stuff...
+	'	F.Intrinsic.Control.Case("Column Name 2")
+	'		'Do GNARLY STUFF!
+	'F.Intrinsic.Control.EndSelect
+	
+	' This subroutine will update the line to Picked or Closed
+	
+
+	
+	
+Program.Sub.GsGCData1_RowCellClick.End
+
+Program.Sub.Check_Table.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+' This subroutine will check to see if GCG_5972_MATL_HNDL3 exists and will create it if it doesn't
+
+V.Local.bExists.Declare
+V.Local.sSQL.Declare
+F.ODBC.Connection!Con.TableExists("GCG_5972_MATL_HNDL3",V.Local.bExists)
+
+' Create the table if it doesn't exist
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	' Build the create statement
+	V.Local.sSQL.Set("CREATE TABLE GCG_5972_MATL_HNDL3(JOB CHAR(6)  ,SUFFIX CHAR(3),SEQ CHAR(6)  ,PART CHAR(20)  ,LOC CHAR(2), DESCRIPTION CHAR(30)  ,QUANTITY NUMERIC(12,4)  ,ORIGIN CHAR(8)  ,DESTINATION CHAR(8)  ,REQ_BY CHAR(20)  ,DATE_REQ DATETIME  ,PICKED_BY CHAR(15),DATE_PICKED DATETIME,DEL_BY CHAR(15),DATE_DEL DATETIME,STATUS CHAR(10) ,TYPE CHAR(1)  )")
+	' Execute the create statement
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.Check_Table.End
+
+Program.Sub.Matlreq_Click.Start
+Gui.frmMain..Visible(0)
+'Gui.frmMain.tmrRefresh.Interval(0)
+Gui.frmMain..show
+Gui.f_matlreq..show
+Gui.f_matlreq.txt1.BackColor(V.Color.LtGray)
+Program.Sub.Matlreq_Click.End
+
+Program.Sub.f_MatlReq_Unload.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+Gui.f_matlreq..Visible(0)
+'Gui.f_MDisp..Visible(0)
+'Gui.f_MDisp.tmrRefresh.Interval(0)
+F.Intrinsic.Control.CallSub(frmMain_RefreshClick)
+Gui.f_matlreq.txt1.BackColor(V.Color.LtGreen)
+'gui.f_matlreq.lbl1.Caption("Scan Labor Barcode")
+'Gui.f_matlreq.lbl1.ForeColor(V.Color.Black)
+'Gui.f_MDisp..show
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.f_MatlReq_Unload.End
+
+Program.Sub.Matlreq_Enter.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+F.Intrinsic.Control.CallSub(Matlreq)
+gui.f_matlreq.txt1.Text("")
+'gui.f_matlreq.lbl1.Caption("Scan Labor Barcode")
+'Gui.f_matlreq.lbl1.ForeColor(V.Color.Black)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Matlreq_Enter.End
+
+Program.Sub.Request99xxxx.Start
+' This subroutine will get a list of the manufactured components for a job and make a material request for each one if one does not already exist
+
+V.Local.iFor.Declare
+V.Local.sSel.Declare
+V.Local.sRet.Declare
+V.Local.sMatl.Declare
+V.Local.sSQL.Declare
+V.Local.sPDQ.Declare
+V.Local.sPart.Declare
+V.Local.sDesc.Declare
+V.Local.sQty.Declare
+V.Local.sOrigin.Declare
+V.Local.bInstr.Declare
+V.Local.bEmpty.Declare
+V.Local.iLen.Declare
+
+' Get a list of 99xxxx sequences from the work order
+
+' Build the string to get the list
+F.Intrinsic.String.Build("select SEQ from V_JOB_OPERATIONS where SEQ >= '990000' and SEQ < '995000' and JOB = '{0}' and SUFFIX = '{1}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sSel)
+
+' Execute and return
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+
+' If there are sequences
+F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+
+	' Remove #$#
+	F.Intrinsic.String.Replace(V.Local.sRet,"#$#","",V.Local.sRet)
+
+	' Remove the last *!*
+	F.Intrinsic.String.Len(V.Local.sRet,V.Local.iLen)
+	F.Intrinsic.Math.Sub(V.Local.iLen,3,V.Local.iLen)
+	F.Intrinsic.String.Left(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+	' Split the string
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sMatl)
+
+	' Loop through the material list
+	F.Intrinsic.Control.For(V.Local.iFor,V.Local.sMatl.LBound,V.Local.sMatl.UBound,1)
+
+		' Get Part, Description, and Quantity from V_JOB_OPERATIONS
+		' Build the string to get the values
+		F.Intrinsic.String.Build("select PART, DESCRIPTION, UNITS from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sMatl(v.Local.iFor),V.Local.sSel)
+
+		' Execute and return
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+
+		' Remove #$#
+		F.Intrinsic.String.Replace(V.Local.sRet,"#$#","",V.Local.sRet)
+
+		' Split the String
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPDQ)
+
+		' Save the values to friendly names
+		V.Local.sPart.Set(V.Local.sPDQ(0))
+		V.Local.sDesc.Set(V.Local.sPDQ(1))
+		V.Local.sQty.Set(V.Local.sPDQ(2))
+
+		' Get the Origin - "Multiple" when multiple lot/bin records exist, "N/A" when no lot/bin records exist
+		' Build the selection string to query the item master
+		F.Intrinsic.String.Build("select distinct BIN from ITEM_MASTER where PART = '{0}' and QUANTITY > 0",V.Local.sPart,V.Local.sSel)
+
+		' Execute and return
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+
+		' Check to see if multiple bins were returned
+		F.Intrinsic.String.Instr(V.Local.sRet,"*!*",0,V.Local.bInstr)
+
+		' Check to see if no bins were returned
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+			V.Local.bEmpty.Set(False)
+		F.Intrinsic.Control.Else
+			V.Local.bEmpty.Set(True)
+		F.Intrinsic.Control.EndIf
+
+		' If no bins were returned set sOrigin = "N/A", if one bin was returned set sOrigin = the returned bin, if multiple bins were returned set sOrigin = "Multiple"
+		F.Intrinsic.Control.If(V.Local.bEmpty,=,True)
+			V.Local.sOrigin.Set("N/A")
+		F.Intrinsic.Control.ElseIf(V.Local.bInstr,=,False)
+			V.Local.sOrigin.Set(V.Local.sRet)
+		F.Intrinsic.Control.Else
+			V.Local.sOrigin.Set("Multiple")
+		F.Intrinsic.Control.EndIf
+
+		' Build the string to find out if the request exists
+		F.Intrinsic.String.Build("Select status from GCG_5972_MATL_HNDL3 where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sMatl(v.Local.iFor),V.Local.sSel)
+
+		' Execute and return
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+
+		' If the sequence doesn't exist write the record to GCG_5972_MATL_HNDL3
+		F.Intrinsic.Control.If(V.Local.sRet,=,"")
+
+			' Build the string
+			F.Intrinsic.String.Build("Insert into GCG_5972_MATL_HNDL3 (Job, Suffix, Seq, Part, Description, Quantity, Origin, Destination, Req_By, Date_Req, Picked_By, Status,Type) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','M')",V.Global.sWO,V.Global.sWoSuffix,V.Local.sMatl(v.Local.iFor),V.Local.sPart.PSQLFriendly,V.Local.sDesc.PSQLFriendly,V.Local.sQty,V.Local.sOrigin.PSQLFriendly,V.Global.sWC.PSQLFriendly,V.Global.GuiUserName.PSQLFriendly,V.Global.sSQLDate,"OPEN","OPEN",V.Local.sSQL)
+
+			' Insert the record
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Request99xxxx.End
+
+Program.Sub.MatlPick_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+' This subroutine will print the material pick ticket
+V.Local.sParams.Declare
+V.Local.sValues.Declare
+V.Local.iRptId.Declare
+V.Local.srptLoc.Declare
+V.Local.sbfseq.Declare(String)
+v.Local.ssel.Declare(String)
+V.Local.iDash.Declare
+V.Local.sSQL.Declare
+V.Local.sRet.Declare
+V.Local.sWoPrevSeq.Declare
+V.Local.sReqDateTime.Declare
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+V.Local.sMonth.Declare
+V.Local.sDay.Declare
+V.Local.sYear.Declare
+V.Local.sHours.Declare
+V.Local.sMinutes.Declare
+V.Local.sSeconds.Declare
+V.Local.sSQLDate.Declare
+v.Local.sName.Declare
+v.Local.sPart.Declare
+V.Local.iQuantity.Declare(Float)
+v.Local.sdestination.Declare
+v.Local.sOrigin.Declare
+	
+
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","WO",v.Args.RowIndex,v.Global.sWO)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Seq",v.Args.RowIndex,V.Global.sWOSeq)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Part",v.Args.RowIndex,v.Local.sPart)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","date_req",v.Args.RowIndex,v.Local.sReqDateTime)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Picked_by",v.Args.RowIndex,v.Local.sName)	
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Destination",v.Args.RowIndex,v.Local.sdestination)	
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Quantity",v.Args.RowIndex,v.Local.iQuantity)
+	Gui.frmMain.GsGCData0.GetCellValueByColumnName("gvData0","Origin",v.Args.RowIndex,v.Local.sOrigin)
+	
+	'evaluate if request is from move ticket final inspections FINS 
+	f.Intrinsic.Control.If(v.Local.sdestination.Trim,<>,"FG")
+		v.Local.iQuantity.Set(0)
+	f.Intrinsic.Control.EndIf
+	
+	' Convert Gridview Datetime to SQL Datetime
+	F.Intrinsic.String.DateString(V.Local.sReqDateTime,V.Local.sDate)
+	F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+	F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+	F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+	F.Intrinsic.String.TimeStringsec(V.Local.sReqDateTime,V.Local.sTime)
+	F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+	F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+	F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+	F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.local.sSQLDate)
+	
+	F.Intrinsic.String.Instr(V.Global.sWO,"-",0,V.Local.iDash)
+	F.Intrinsic.Control.If(V.Local.iDash,>,0)
+		F.Intrinsic.String.Right(v.Global.sWO,3,V.global.sWoSuffix)
+		F.Intrinsic.String.Left(v.Global.sWO,6,V.Global.sWO)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Left(v.Global.sWO,6,V.Global.sWO)
+		V.global.sWoSuffix.Set("")
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("select Seq from V_JOB_OPERATIONS where JOB='{0}' and SUFFIX='{1}' and SEQ < '{2}' and LMO = 'L' and FLAG_SET_UP <> 'Y' order by SEQ desc",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sSel)
+F.ODBC.Connection!con.OpenRecordsetRO("rstSel",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.con!rstSel.EOF,=,false)
+		V.Local.sbfseq.Set(V.ODBC.con!rstSel.FieldValTrim!Seq)
+	F.Intrinsic.Control.EndIf
+F.ODBC.con!rstSel.Close
+
+F.Intrinsic.Control.If(V.Global.sWO,<>,"")
+	F.Intrinsic.String.Concat(V.Global.sWO,"*!*",V.Global.sWoSuffix,"*!*",V.Global.sWOseq,"*!*",V.Local.sbfseq,"*!*",V.Local.iQuantity,"*!*",V.Local.sOrigin,"*!*",V.Local.sdestination,V.Local.sValues)
+	F.Intrinsic.String.Split("Job*!*Suffix*!*Seq*!*BFSeq*!*FGQty*!*Origin*!*Destination","*!*",V.Local.sParams)
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	F.Intrinsic.String.Concat(V.Caller.BusintDir,"\Custom\GCG_5972_Pick_ticket_dispatch.rpt",V.Local.srptLoc)
+	F.Global.BI.InitializeReport("Pick_ticket_dispatch",V.Local.srptLoc,V.Local.iRptId)
+	'F.Global.BI.PrintReport(V.Local.iRptId,0,V.Local.sParams,V.Local.sValues,"",True)
+	
+	F.Global.BI.PrintReport(V.Local.iRptId,3,V.Local.sParams,V.Local.sValues,V.Screen.frmMain!txtprinter.Value.trim,True)	
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please Select a Sequence First","On-line GUI Message")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MatlPick_Click.End
+
+
+Program.Sub.Cleanup.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+' This subroutine will clean out records older than 60 days
+
+'F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.ODBC.Connection!con.Execute("delete from GCG_5972_MATL_HNDL3 where DATE_DEL < curdate()-60")
+'F.ODBC.Connection!con.Close
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Cleanup.End
+
+Program.Sub.MatlReq.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+' This subroutine will write a material request to GCG_5972_MATL_HNDL3 when a GUI user highlights a line and clicks Script 1
+
+V.Local.sLMO.Declare
+V.Local.sSel.Declare
+V.Local.sRet.Declare
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+V.Local.sMonth.Declare
+V.Local.sDay.Declare
+V.Local.sYear.Declare
+V.Local.sHours.Declare
+V.Local.sMinutes.Declare
+V.Local.sSeconds.Declare
+
+' Convert V.Ambient.Now to SQL Datetime
+F.Intrinsic.String.DateString(V.Ambient.Now,V.Local.sDate)
+F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+F.Intrinsic.String.TimeStringsec(V.Ambient.Now,V.Local.sTime)
+F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.Global.sSQLDate)
+
+
+'called from custom menu GAB hook
+f.Intrinsic.Control.If(v.Caller.Hook,<,"1000000")
+	f.Intrinsic.Control.If(v.Caller.Caller,=,GSS.SFDC.Client)
+		F.Intrinsic.String.Mid(V.passed.MainFormView-WorkOrderOperation,12,6,V.Global.sWO)
+		F.Intrinsic.String.Mid(V.passed.MainFormView-WorkOrderOperation,19,3,V.Global.sWoSuffix)
+		V.Global.sWoSeq.Set(v.Passed.MainFormView-txtSequence)
+		v.Global.sWC.Set(v.Passed.MainFormView-txtPart)
+		f.Intrinsic.String.Left(v.Passed.MainFormView-txtType,1,v.Local.sLMO)
+	f.Intrinsic.Control.Else
+		V.Local.sLMO.Set(V.Passed.009989)
+		V.Global.sWO.Set(V.Passed.009990)
+		V.Global.sWoSuffix.Set(V.Passed.009991)
+		V.Global.sWoSeq.Set(V.Passed.009992)
+		V.Global.sWC.Set(V.Passed.009996)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.else
+' scan string will be $%123456778901000
+	v.Local.sScantxt.Declare(String)
+	v.Local.sScantxt.Set(V.Screen.f_matlreq!txt1.Text)
+	f.Intrinsic.String.Mid(v.Local.sScantxt,3,15,v.Local.sScantxt)
+	f.Intrinsic.String.Left(v.Local.sScantxt,6,v.Global.sWO)
+	f.Intrinsic.String.Mid(v.Local.sScantxt,7,3,v.Global.sWoSuffix)
+	f.Intrinsic.String.Trim(v.Global.sWoSuffix,v.Global.sWoSuffix)
+	f.Intrinsic.String.Right(v.Local.sScantxt,6,v.Global.sWoSeq)
+	'add sWC
+	F.Intrinsic.String.Build("Select PART from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sSel)
+'	F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+	v.Global.sWC.Set(v.Local.sRet)
+'	F.ODBC.Connection!con.Close
+f.Intrinsic.Control.endif
+
+F.Intrinsic.Control.If(V.Global.sWC,=,"ZIND")
+	F.Intrinsic.UI.Msgbox("Please select a Work Order Line first","On-line GUI Message")
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"")
+		V.Global.sWoSuffix.Set("###")
+	F.Intrinsic.Control.EndIf
+	' Check to see that it is a labor sequence
+	F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+		F.Intrinsic.String.Build("Select LMO from V_JOB_OPERATIONS where JOB = '{0}' and SEQ = '{1}'",V.Global.sWO,V.Global.sWoSeq,V.Local.sSel)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select LMO from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+'	F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+
+
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"L")
+		F.Intrinsic.UI.Msgbox("Please select a labor sequence","On-line GUI Message")
+		'gui.f_matlreq.lbl1.Caption("Please select a labor sequence")
+		'Gui.f_matlreq.lbl1.ForeColor(V.Color.Red)
+		Gui.f_matlreq.txt1.BackColor(V.Color.LtRed)
+'		F.ODBC.Connection!con.Close
+		'F.Intrinsic.Control.End
+
+'		Gui.frmMain..Visible(0)
+'		Gui.frmMain.tmrRefresh.Interval(0)
+'		Gui.frmMain..show
+		gui.f_matlreq.txt1.Text("")	
+						
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Requestwip)
+		'F.ODBC.Connection!con.Close
+		'F.Intrinsic.Control.CallSub(f_matlreq_unload)
+		'F.Intrinsic.Control.CallSub(Dispatch)
+		gui.f_matlreq.txt1.Text("")	
+		'gui.f_matlreq.lbl1.Caption("Scan Labor Barcode")
+		'Gui.f_matlreq.lbl1.ForeColor(V.Color.Black)
+	F.Intrinsic.Control.EndIf	
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.CallSub(f_matlreq_unload)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MatlReq.End
+
+Program.Sub.RequestWIP.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+' This subroutine will write the line to GCG_5972_MATL_HNDL3 for the WIP request
+
+V.Local.sSel.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+V.Local.sOrigin.Declare
+V.Local.sQty.Declare
+V.Local.sMessage.Declare
+V.Local.sWoPrevSeq.Declare
+V.Local.sWCPrev.Declare
+V.Local.sWIPBin.Declare
+V.Local.sPart.Declare
+V.Local.sDesc.Declare
+v.Local.sLoc.Declare
+
+' Find the part number for the work order
+F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+	F.Intrinsic.String.Build("Select Part from V_JOB_HEADER where JOB = '{0}'",V.Global.sWO,V.Local.sSel)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select Part from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sSel)
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+V.Local.sPart.Set(V.Local.sRet)
+' Find the part location for the work order
+F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+	F.Intrinsic.String.Build("Select location from V_JOB_HEADER where JOB = '{0}'",V.Global.sWO,V.Local.sSel)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select location from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sSel)
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+V.Local.sLoc.Set(V.Local.sRet)
+
+' Find the previous labor sequence for the work order
+F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+	F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SEQ < '{1}' and LMO = 'L' and FLAG_SET_UP <> 'Y' order by SEQ desc",V.Global.sWO,V.Global.sWoSeq,V.Local.sSel)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ < '{2}' and LMO = 'L' and FLAG_SET_UP <> 'Y' order by SEQ desc",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sSel)
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"")
+	V.Local.sWoPrevSeq.Set("NONE")
+	V.Local.sWCPrev.Set("N/A")
+F.Intrinsic.Control.Else
+	V.Local.sWoPrevSeq.Set(V.Local.sRet)
+	' Find the previous work center
+	F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+		F.Intrinsic.String.Build("Select PART from V_JOB_OPERATIONS where JOB = '{0}' and SEQ = '{1}' and LMO = 'L'",V.Global.sWO,V.Local.sWoPrevSeq,V.Local.sSel)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select PART from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}' and LMO = 'L'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sWoPrevSeq,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sWCPrev)
+	F.Intrinsic.String.Trim(V.Local.sWCPrev,V.Local.sWCPrev)
+F.Intrinsic.Control.EndIf
+' Find the part description
+F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+	F.Intrinsic.String.Build("Select Description from V_JOB_HEADER where JOB = '{0}'",V.Global.sWO,V.Local.sSel)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select Description from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sSel)
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+V.Local.sDesc.Set(V.Local.sRet)
+' Set sBin equal to sWIPBin, if multiple then set sBin to Multi, if blank then set sBin to WIP
+F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+	F.Intrinsic.String.Build("Select BIN from WIP_BIN where JOB = '{0}' and SEQUENCE = '{1}' and QTY_BIN > 0",V.Global.sWO,V.Local.sWoPrevSeq,V.Local.sSel)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select BIN from WIP_BIN where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE = '{2}' and QTY_BIN > 0",V.Global.sWO,V.Global.sWoSuffix,V.Local.sWoPrevSeq,V.Local.sSel)
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sWIPBin)
+F.Intrinsic.String.Trim(V.Local.sWIPBin(0),V.Local.sWIPBin(0))
+F.Intrinsic.Control.If(V.Local.sWIPBin.UBound,>,0)
+	V.Local.sOrigin.Set("Multiple")
+F.Intrinsic.Control.ElseIf(V.Local.sWIPBin(0),=,"")
+	V.Local.sOrigin.Set(V.Local.sWCPrev)
+F.Intrinsic.Control.Else
+	V.Local.sOrigin.Set(V.Local.sWIPBin(0))
+F.Intrinsic.Control.EndIf
+' Fill the quantity with the WIP_BIN.QTY_BIN sum or the work order quantity if no WIP in Bins
+F.Intrinsic.Control.SelectCase(V.Local.sWIPBin(0))
+F.Intrinsic.Control.Case("")
+	F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+		F.Intrinsic.String.Build("Select QTY_ORDER from V_JOB_HEADER where JOB = '{0}'",V.Global.sWO,V.Local.sSel)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select QTY_ORDER from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CaseElse
+	F.Intrinsic.Control.If(V.Global.sWoSuffix,=,"###")
+		F.Intrinsic.String.Build("Select sum(QTY_BIN) as Qty from WIP_BIN where JOB = '{0}' and SEQUENCE = '{1}'",V.Global.sWO,V.Local.sWoPrevSeq,V.Local.sSel)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select sum(QTY_BIN) as Qty from WIP_BIN where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Local.sWoPrevSeq,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndSelect
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+V.Local.sQty.Set(V.Local.sRet)
+' Write the line to GCG_5972_MATL_HNDL3 if it doesn't already exist
+F.Intrinsic.String.Build("Select status from GCG_5972_MATL_HNDL3 where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sSel)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"")
+	F.Intrinsic.String.Build("Insert into GCG_5972_MATL_HNDL3 (Job, Suffix, Seq, Part, Description, Quantity, Origin, Destination, Req_By, Date_Req, Picked_By, Status,Type, Loc) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','W','{12}')",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sPart.PSQLFriendly,V.Local.sDesc.PSQLFriendly,V.Local.sQty,V.Local.sOrigin.PSQLFriendly,V.Global.sWC.PSQLFriendly,V.Global.GuiUserName.PSQLFriendly,V.Global.sSQLDate,"OPEN","OPEN",v.Local.sLoc,V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	f.Intrinsic.Control.If(v.Caller.Hook,<,"1000000")
+		F.Intrinsic.UI.Msgbox("Request sent successfully","On-line GUI Message")
+	f.Intrinsic.Control.Else
+		Gui.f_matlreq.txt1.BackColor(V.Color.LtGreen)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.ElseIf(v.Local.sRet.Left9,=,"DELIVERED")	
+	F.Intrinsic.String.Build("Insert into GCG_5972_MATL_HNDL3 (Job, Suffix, Seq, Part, Description, Quantity, Origin, Destination, Req_By, Date_Req, Picked_By, Status,Type, Loc) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','W','{12}')",V.Global.sWO,V.Global.sWoSuffix,V.Global.sWoSeq,V.Local.sPart.PSQLFriendly,V.Local.sDesc.PSQLFriendly,V.Local.sQty,V.Local.sOrigin.PSQLFriendly,V.Global.sWC.PSQLFriendly,V.Global.GuiUserName.PSQLFriendly,V.Global.sSQLDate,"OPEN","OPEN",v.Local.sLoc,V.Local.sSQL)
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		f.Intrinsic.Control.If(v.Caller.Hook,<,"1000000")
+			F.Intrinsic.UI.Msgbox("Request sent successfully","On-line GUI Message")
+		f.Intrinsic.Control.Else
+			Gui.f_matlreq.txt1.BackColor(V.Color.LtGreen)
+		f.Intrinsic.Control.EndIf		
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Request already exists and the status is {0}",V.Local.sRet,V.Local.sMessage)
+	F.Intrinsic.UI.Msgbox(V.Local.sMessage,"On-line GUI Message")
+	Gui.f_matlreq.txt1.BackColor(V.Color.LtRed)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.RequestWIP.End
+
+
+Program.Sub.CheckSec.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+' Check to see that there is an active user
+
+V.Local.sInitial.Declare
+V.Local.sLastName.Declare
+V.Local.iPos.Declare
+V.Local.iLen.Declare
+
+'check if called from the GUI, SFDC or GS Menu
+f.Intrinsic.Control.If(v.Caller.Hook,>,"1000000")
+	V.Global.GuiUserName.Set(v.Caller.User)
+f.Intrinsic.Control.Elseif(v.Caller.Caller,=,GSS.SFDC.Client)
+	V.Global.GuiUserName.Set(V.Passed.EmployeeName)
+	V.Global.GuiUserNo.Set(V.Passed.Employee)
+F.Intrinsic.Control.Else
+	'GUI
+	V.Global.GuiUserName.Set(V.Passed.000005)
+	V.Global.GuiUserNo.Set(V.Passed.009993)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.GuiUserName,=,"")
+	F.Intrinsic.UI.Msgbox("Please select/scan an employee first","On-line GUI Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+f.Intrinsic.Control.If(v.Caller.Hook,<,"1000000")
+	F.Intrinsic.String.Left(V.Global.GuiUserName,1,V.Local.sInitial)
+	F.Intrinsic.String.Concat(V.Local.sInitial,". ",V.Local.sInitial)
+	F.Intrinsic.String.Instr(V.Global.GuiUserName," ",V.Local.iPos)
+	F.Intrinsic.String.Len(V.Global.GuiUserName,V.Local.iLen)
+	F.Intrinsic.Math.Sub(V.Local.iLen,V.Local.iPos,V.Local.iLen)
+	F.Intrinsic.String.Right(V.Global.GuiUserName,V.Local.iLen,V.Local.sLastName)
+	F.Intrinsic.String.Concat(V.Local.sInitial,V.Local.sLastName,V.Global.GuiUserName)
+	F.Intrinsic.String.Left(V.Global.GuiUserName,15,V.Global.GuiUserName)
+f.Intrinsic.Control.endif
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckSec.End
+
+Program.Sub.gsfgDispatch_CommandClick.Start
+' This subroutine will update the line to Picked or Closed
+
+V.Local.sWorkOrder.Declare
+V.Local.sSuffix.Declare
+V.Local.sSeq.Declare
+V.Local.sPart.Declare
+V.Local.sStatus.Declare
+V.Local.sName.Declare
+V.Local.iDash.Declare
+V.Local.sSQL.Declare
+V.Local.sSel.Declare
+V.Local.sRet.Declare
+V.Local.sWoPrevSeq.Declare
+V.Local.sReqDateTime.Declare
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+V.Local.sMonth.Declare
+V.Local.sDay.Declare
+V.Local.sYear.Declare
+V.Local.sHours.Declare
+V.Local.sMinutes.Declare
+V.Local.sSeconds.Declare
+V.Local.sSQLDate.Declare
+V.Local.sNowDate.Declare
+
+Gui.frmMain.gsfgDispatch.GetTextMatrix(1,V.Args.key,V.Local.sWorkOrder)
+Gui.frmMain.gsfgDispatch.GetTextMatrix(2,V.Args.key,V.Local.sSeq)
+Gui.frmMain.gsfgDispatch.GetTextMatrix(3,V.Args.key,V.Local.sPart)
+Gui.frmMain.gsfgDispatch.GetTextMatrix(9,V.Args.key,V.Local.sReqDateTime)
+Gui.frmMain.gsfgDispatch.GetTextMatrix(10,V.Args.key,V.Local.sName)
+
+' Convert Flexgrid Datetime to SQL Datetime
+F.Intrinsic.String.DateString(V.Local.sReqDateTime,V.Local.sDate)
+F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+F.Intrinsic.String.TimeStringsec(V.Local.sReqDateTime,V.Local.sTime)
+F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.local.sSQLDate)
+
+F.Intrinsic.String.Instr(V.Local.sWorkOrder,"-",0,V.Local.iDash)
+F.Intrinsic.Control.If(V.Local.iDash,>,0)
+	F.Intrinsic.String.Right(V.Local.sWorkOrder,3,V.Local.sSuffix)
+	F.Intrinsic.String.Left(V.Local.sWorkOrder,6,V.Local.sWorkOrder)
+F.Intrinsic.Control.Else
+	V.Local.sSuffix.Set("###")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select Status from GCG_5972_MATL_HNDL3 where Job = '{0}' and Suffix = '{1}' and Seq = '{2}' and Part = '{3}' and Date_Req = '{4}'",V.Local.sWorkOrder,V.Local.sSuffix,V.Local.sSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSel)
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+F.ODBC.Connection!con.Close
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sStatus)
+F.Intrinsic.String.Trim(V.Local.sStatus(0),V.Local.sStatus(0))
+
+' Convert V.Ambient.Now to SQL Datetime
+F.Intrinsic.String.DateString(V.Ambient.Now,V.Local.sDate)
+F.Intrinsic.String.Left(V.Local.sDate,4,V.Local.sYear)
+F.Intrinsic.String.Mid(V.Local.sDate,5,2,V.Local.sMonth)
+F.Intrinsic.String.Right(V.Local.sDate,2,V.Local.sDay)
+F.Intrinsic.String.TimeStringsec(V.Ambient.Now,V.Local.sTime)
+F.Intrinsic.String.Left(V.Local.sTime,2,V.Local.sHours)
+F.Intrinsic.String.Mid(V.Local.sTime,3,2,V.Local.sMinutes)
+F.Intrinsic.String.Right(V.Local.sTime,2,V.Local.sSeconds)
+F.Intrinsic.String.Build("{0}-{1}-{2} {3}:{4}:{5}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sHours,V.Local.sMinutes,V.Local.sSeconds,V.Local.sNowDate)
+
+
+F.Intrinsic.Control.If(v.Local.sName.Trim,<>,v.Global.GuiUserName.Trim,and,v.Local.sStatus(0),=,"PICKING")
+	F.Intrinsic.UI.Msgbox("Material is being picked by another employee","On-Line GUI Message")
+F.Intrinsic.Control.Else
+Gui.frmMain..Visible(0)
+	F.Intrinsic.Control.SelectCase(V.Local.sStatus(0))
+		F.Intrinsic.Control.Case("OPEN")
+			F.Intrinsic.String.Build("update GCG_5972_MATL_HNDL3 set status = 'PICKING', Date_Picked = '{0}', Picked_By = '{1}' where Job = '{2}' and Suffix = '{3}' and Seq = '{4}' and Part = '{5}' and Date_Req = '{6}'",V.Local.sNowDate,V.Global.GuiUserName,V.Local.sWorkOrder,V.Local.sSuffix,V.Local.sSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSQL)
+			F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.Case("PICKING")
+			F.Intrinsic.String.Build("update GCG_5972_MATL_HNDL3 set status = 'DELIVERED', Date_Del = '{0}', Del_By = '{1}' where Job = '{2}' and Suffix = '{3}' and Seq = '{4}' and Part = '{5}' and Date_Req = '{6}'",V.Local.sNowDate,V.Global.GuiUserName,V.Local.sWorkOrder,V.Local.sSuffix,V.Local.sSeq,V.Local.sPart,V.local.sSQLDate,V.Local.sSQL)
+			F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.ODBC.Connection!con.Close
+			' Find the previous labor sequence for the work order
+			F.Intrinsic.Control.If(V.Local.sSuffix,=,"###")
+				F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SEQ < '{1}' and LMO = 'L' order by SEQ desc",V.Local.sWorkOrder,V.Local.sSeq,V.Local.sSel)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("Select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ < '{2}' and LMO = 'L' order by SEQ desc",V.Local.sWorkOrder,V.Local.sSuffix,V.Local.sSeq,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSel,V.Local.sRet)
+			F.ODBC.Connection!con.Close
+			' Remove any WIP in Bins for this Work Order and Previous sequence
+			F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+				V.Local.sWoPrevSeq.Set(V.Local.sRet)
+				F.Intrinsic.Control.If(V.Local.sSuffix,=,"###")
+					F.Intrinsic.String.Build("Delete from WIP_BIN where JOB = '{0}' and SEQUENCE = '{1}'",V.Local.sWorkOrder,V.Local.sWoPrevSeq,V.Local.sSQL)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("Delete from WIP_BIN where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE = '{2}'",V.Local.sWorkOrder,V.Local.sSuffix,V.Local.sWoPrevSeq,V.Local.sSQL)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUSER,V.Ambient.PPASS)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.ODBC.Connection!con.Close
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndSelect
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Dispatch)
+
+Program.Sub.gsfgDispatch_CommandClick.End
+
+Program.Sub.chkAutoRef.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmShip!chkAutoRef.Value,=,0)
+		Gui.frmMain.txtAutoRef.Enabled(False)
+		Gui.frmMain.txtAutoRef.Locked(True)
+		Gui.frmMain.txtAutoRef.BackColor(-2147483633)
+		Gui.frmMain.timerAutoRefresh.Enabled(False)
+		Gui.frmMain.lblStatus.Visible(False)
+	F.Intrinsic.Control.Else
+		Gui.frmMain.txtAutoRef.Enabled(True)
+		Gui.frmMain.txtAutoRef.Locked(False)
+		Gui.frmMain.txtAutoRef.BackColor(-2147483643)
+		F.Intrinsic.Control.CallSub(txtAutoRef_LostFocus)
+		Gui.frmMain.txtAutoRef.SetFocus
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.chkAutoRef.End
+
+Program.Sub.txt_AutoRef_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bNumeric.Declare
+	V.Local.iMin.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmMain!txtAutoRef.Text,<>,"")
+		F.Intrinsic.Math.IsNumeric(V.Screen.frmMain!txtAutoRef.Text,V.Local.bNumeric)
+		F.Intrinsic.Control.If(V.Local.bNumeric,=,False)
+			Function.Intrinsic.UI.Msgbox("Value Must be Numeric")
+			Gui.frmMain.txtAutoRef.Text("")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Fix(V.Screen.frmMain!txtAutoRef.Text,V.Local.iMin)
+			F.Intrinsic.Control.If(V.Local.iMin,>,30)
+				Function.Intrinsic.UI.Msgbox("Max refresh is 30 minutes.","Max")
+				Gui.frmMain.txtAutoRef.Text(30)
+			F.Intrinsic.Control.Else
+				Gui.frmMain.txtAutoRef.Text(V.Local.iMin)
+			F.Intrinsic.Control.EndIf
+			Gui.frmMain.timerAutoRefresh.Enabled(False)
+			Gui.frmMain.timerAutoRefresh.Interval(60000)
+			Gui.frmMain.timerAutoRefresh.Enabled(True)
+			V.Global.bRefresh.Set(True)
+			F.Intrinsic.Control.CallSub(timerautorefresh_timer)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.txt_AutoRef_LostFocus.End
+
+Program.Sub.timerAutoRefresh_Timer.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sCaption.Declare
+
+	F.Intrinsic.Control.If(V.Global.bRefresh)
+		V.Global.bRefresh.Set(False)
+		V.Global.iCnt.Set(V.Screen.frmMain!txtAutoRef.Text)
+		F.Intrinsic.String.Build("Auto refresh data in {0} minute(s).",V.Global.iCnt,V.Local.sCaption)
+		Gui.frmMain.lblStatus.ForeColor(V.Color.Black)
+		Gui.frmMain.lblStatus.Caption(V.Local.sCaption)
+		Gui.frmMain.lblStatus.Visible(True)
+		F.Intrinsic.Control.If(V.Global.iCnt,=,1) 
+			Gui.frmMain.timerAutoRefresh.Enabled(False)
+			Gui.frmMain.timerAutoRefresh.Interval(1000)
+			Gui.frmMain.timerAutoRefresh.Enabled(True)
+			
+			V.Global.bSecs.Set(True)
+			V.Global.iSecs.Set(59)
+			F.Intrinsic.String.Build("Auto refresh data in {0} second(s).",V.Global.iSecs,V.Local.sCaption)
+			
+			Gui.frmMain.timerAutoRefresh.Enabled(False)
+			Gui.frmMain.timerAutoRefresh.Interval(1000)
+			Gui.frmMain.timerAutoRefresh.Enabled(True)
+			
+			Gui.frmMain.lblStatus.ForeColor(V.Color.LtRed)
+			Gui.frmMain.lblStatus.Caption(V.Local.sCaption)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Global.bSecs)
+			f.Intrinsic.Control.if(V.Screen.frmMain!chkAutoRef.Value,=,1)
+				F.Intrinsic.Math.Sub(V.Global.iSecs,1,V.Global.iSecs)
+				F.Intrinsic.Control.If(V.Global.iSecs,=,0)
+					'Gui.frmShip.lblStatus.SetFocus
+					F.Intrinsic.Control.CallSub(frmMain_RefreshClick)
+					Gui.frmMain.timerAutoRefresh.Enabled(False)
+					Gui.frmMain.timerAutoRefresh.Interval(60000)
+					Gui.frmMain.timerAutoRefresh.Enabled(True)
+					V.Global.bRefresh.Set(True)
+					V.Global.bSecs.Set(False)
+					F.Intrinsic.Control.CallSub(timerautorefresh_timer)
+				F.Intrinsic.Control.Else
+					Gui.frmMain.timerAutoRefresh.Enabled(False)
+					Gui.frmMain.timerAutoRefresh.Interval(1000)
+					Gui.frmMain.timerAutoRefresh.Enabled(True)
+					
+					F.Intrinsic.String.Build("Auto refresh data in {0} second(s).",V.Global.iSecs,V.Local.sCaption)
+					Gui.frmMain.lblStatus.ForeColor(V.Color.LtRed)
+					Gui.frmMain.lblStatus.Caption(V.Local.sCaption)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Else
+				Gui.frmMain.lblStatus.Visible(false)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Sub(V.Global.iCnt,1,V.Global.iCnt)
+			F.Intrinsic.Control.If(V.Global.iCnt,=,1)
+				Gui.frmMain.timerAutoRefresh.Enabled(False)
+				Gui.frmMain.timerAutoRefresh.Interval(1000)
+				Gui.frmMain.timerAutoRefresh.Enabled(True)
+				V.Global.bSecs.Set(True)
+				V.Global.iSecs.Set(59)
+				F.Intrinsic.String.Build("Auto refresh data in {0} second(s).",V.Global.iSecs,V.Local.sCaption)
+				Gui.frmMain.lblStatus.ForeColor(V.Color.LtRed)
+				Gui.frmMain.lblStatus.Caption(V.Local.sCaption)
+			F.Intrinsic.Control.Else				
+				F.Intrinsic.String.Build("Auto refresh data in {0} minute(s).",V.Global.iCnt,V.Local.sCaption)
+				Gui.frmMain.lblStatus.ForeColor(V.Color.Black)
+				Gui.frmMain.lblStatus.Caption(V.Local.sCaption)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.timerAutoRefresh_Timer.End
+
+Program.Sub.Check_Printer.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare	
+	V.Local.sRet.Declare
+	V.Local.bRet.Declare
+	V.Local.sSQL.Declare
+	'F.ODBC.Connection!conC.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+	F.ODBC.Connection!conC.OpenCommonConnection(500)
+
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,1000,5,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.IsNullOrWhitespace)	
+		'lookup gs mobile printer by employee id
+		F.Intrinsic.String.Build("select MUP.NAME from MOBILE_USER_INFO MUI LEFT OUTER JOIN MOBILE_USER_PRINTER MUP ON MUI.UID=MUP.UID WHERE EMPLOYEE_ID = '{0}' AND MUP.TYPE='2';",V.GlOBAL.GuiUserNo,V.Local.sSQL)
+		F.ODBC.Connection!conC.ExecuteAndReturn(V.Local.sSQL,V.Local.sRet)
+		f.Intrinsic.String.Split(v.Local.sRet,",",v.Local.sRet)
+		Gui.frmMain.txtprinter.text(V.Local.sRet(0).Trim)		
+
+	F.Intrinsic.Control.Else
+		'	The field argument accepts the following values:
+		'0 - Boolean
+		'1 - Long
+		'2 - Float
+		'3 - Date
+		'4 - Time
+		'5 - String
+		'6 - Long varchar
+		F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,1000,5,"",V.Local.sRet)		
+		Gui.frmMain.txtprinter.text(V.Local.sRet)
+		
+	F.Intrinsic.Control.EndIf
+	
+	'set user default minutes for refresh
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,2000,5,"",V.Local.sRet)
+	f.Intrinsic.Control.If(V.Local.sRet.IsNullOrWhitespace)
+		'do nothing
+	f.Intrinsic.Control.Else
+		gui.frmMain.txtAutoRef.Text(v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+	
+	'set user default refresh on/off setting
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,2001,0,"",V.Local.bRet)
+	f.Intrinsic.Control.If(V.Local.sRet.IsNullOrWhitespace)
+		'do nothing
+	f.Intrinsic.Control.Else
+		gui.frmMain.chkAutoRef.Value(v.Local.bRet)
+		
+		f.Intrinsic.Control.If(v.Local.bRet,=,True)
+			f.Intrinsic.Control.CallSub(txt_AutoRef_LostFocus)
+			'f.Intrinsic.Control.CallSub(timerAutoRefresh_Timer)
+		f.Intrinsic.Control.EndIf		
+	f.Intrinsic.Control.EndIf
+	F.ODBC.Connection!conC.Close
+	
+	F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.Check_Printer.End
+
+Program.Sub.Save_Printer.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmMain!txtprinter.Value,<>,"")
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,1000,False,V.Screen.frmMain!txtprinter.Value.trim,True,0,-999.0,1/1/1980,12:00:00 AM)
+	F.Intrinsic.Control.EndIf
+	'Save refresh user setting
+'	F.Intrinsic.Control.If(V.Screen.frmMain!txtAutoRef.Value,<>,"")
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,2000,False,V.Screen.frmMain!txtAutoRef.Value.trim,True,0,-999.0,1/1/1980,12:00:00 AM)	
+'	F.Intrinsic.Control.EndIf
+	
+'	F.Intrinsic.Control.If(V.Screen.frmMain!chkAutoRef.Value,=,True)
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5972,2001,False,"0",V.Screen.frmMain!chkAutoRef.Value,0,-999.0,1/1/1980,12:00:00 AM)	
+'	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.Save_Printer.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8753.27150$}$1
+${$6$}$bstevens$}$20240103115742555$}$3Pg7+K2MGztoXyjxMVZqWaM5g3GOUsSNufBpXkESEJTuzltPU/pQdAfC5QedvczhQSQQW7SgY6jqfg6rdZwErQ==
+Program.Sub.Comments.End
